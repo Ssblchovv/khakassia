@@ -11,24 +11,42 @@
 </head>
 <body>
 
+    <div id="mainNavMenu" class="overlayMenu overlayMenu_closed">
+        <img class="overlayMenu__logo" src="/assets/images/logo.png" alt="Логотип сайта">
+
+        <span class="overlayMenu__close-btn text-white" onclick="closeNav(this)">&times;</span>
+      
+        <div class="overlayMenu_content">
+            <span onclick="navigateMenu(this)" data-target="main" class="overlayMenu_content__item font-roboto text-centered text-sm text-underline">Главная</span>
+            <span onclick="navigateMenu(this)" data-target="sightseens" class="overlayMenu_content__item font-roboto text-centered text-sm">Достопримечательности</span>
+            <span onclick="navigateMenu(this)" data-target="tours" class="overlayMenu_content__item font-roboto text-centered text-sm">Туры</span>
+            <span onclick="navigateMenu(this)" data-target="contacts" class="overlayMenu_content__item font-roboto text-centered text-sm">Контакты</span>
+        </div>
+    </div>
+
     <nav class="header header_normal d-flex flex-row">
         <a href="/" class="logo p-1_25">
             <img class="logo__image" src="/assets/images/logo.png" alt="Логотип сайта">
         </a>
 
-        <span href="/" class="menu-button p-1_25 mv-auto">
+        <span class="menu-button p-1_25 mv-auto">
             <img class="menu-button__image" src="/assets/images/hamburger.svg" alt="Кнопка меню">
         </span>
     </nav>
 
-    <section class="hero hero_theme_main d-flex flex-col items-align-center content-space-between">
+    <!-- 
+        И хотя валидатор W3C кидает Warning на отсутствие заголовка внутри section - он нам не нужен,
+        поэтому его нет. Данное поведение разрешено консорциумом W3C.
+        (см. https://www.w3.org/TR/2014/CR-html5-20140204/dom.html#sectioning-content)
+    -->
+    <section class="hero hero_theme_main d-flex flex-col items-align-center content-space-between" data-secname="main">
         <span class="decoy"></span> <!-- Нужен для правильного выравнивания во flex -->
 
         <div class="hero__content">
             <p class="text-header text-centered font-amatic text-ghostly-white m-0">
                 Хакасия
             </p>
-            <p class="text-subheader text-centered font-roboto-light text-semi-transparent-white m-0">
+            <p class="text-sm text-centered font-roboto-light text-semi-transparent-white m-0">
                 Туристическое Агенство Республики Хакасия
             </p>
         </div>
@@ -36,7 +54,7 @@
         <img class="hero__go-down p-1" src="/assets/images/go_down.svg" alt="Перейти вниз">
     </section>
 
-    <section class="sightseens">
+    <section class="sightseens" data-secname="sightseens">
         <h2 class="text-section-title font-amatic">Достопримечательности</h2>
 
         <div class="sightseens__content">

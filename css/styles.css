@@ -37,87 +37,91 @@
 }
 
 .d-flex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .items-align-center {
-    align-items: center;
+  align-items: center;
 }
 
 .content-space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .content-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .mv-auto {
-    margin-top: auto;
-    margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .m-0 {
-    margin: 0rem;
+  margin: 0rem;
 }
 
 .p-0 {
-    padding: 0rem;
+  padding: 0rem;
 }
 
 .p-1 {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .p-1_25 {
-    padding: 1.25rem;
+  padding: 1.25rem;
 }
 
 .p-2 {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .text-centered {
-    text-align: center;
+  text-align: center;
 }
 
 .text-white {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .text-black {
-    color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .text-ghostly-white {
-    color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .text-semi-transparent-white {
-    color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .text-header {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
-.text-subheader {
-    font-size: 0.875rem;
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-underline {
+    text-decoration: underline !important;
 }
 
 .text-section-title {
-    font-size: 2.25rem;
-    margin-bottom: 4rem;
-    text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 /* Utils END */
@@ -146,6 +150,58 @@
   transition: background-color 200ms linear;
 }
 
+.overlayMenu {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: rgba(17, 17, 17, 0.8);
+  overflow-x: hidden;
+}
+
+.overlayMenu_closed {
+  display: none;
+}
+
+.overlayMenu__close-btn {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  font-size: 60px;
+}
+
+.overlayMenu__logo {
+  width: 2.5rem;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+
+.overlayMenu_content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.overlayMenu_content__item {
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
+}
+
+.overlayMenu_content__item:hover,
+.overlayMenu_content__item:focus {
+  color: rgb(191, 191, 191);
+  transition: color 0.3s;
+}
+
 /* .logo {} */
 
 .logo__image {
@@ -153,8 +209,8 @@
 }
 
 .menu-button {
-    width: 24px;
-    height: 1rem;
+  width: 24px;
+  height: 1rem;
 }
 
 .hero {
