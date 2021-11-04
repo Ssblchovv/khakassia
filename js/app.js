@@ -6,6 +6,9 @@ let headerElement = null;
 /** @type {HTMLElement} */
 let menuButtonElement = null;
 
+/** @type {HTMLElement} */
+let toursListBtnMore = null;
+
 const onPageScrolled = function () {
     if (window.pageYOffset > headerElement.offsetTop) {
         headerElement.classList.replace("header_normal", "header_scrolled");
@@ -54,12 +57,21 @@ const navigateMenu = function(callee) {
     }
 }
 
+const showAllTours = function() {
+    document.querySelectorAll(".tours-list-element_hidden").forEach(e => {
+        e.classList.remove("tours-list-element_hidden");
+    });
+    toursListBtnMore.style.display = "none";
+}
+
 const init = function () {
     headerElement = document.querySelector(".header");
     menuButtonElement = document.querySelector(".menu-button");
+    toursListBtnMore = document.querySelector(".tours-list-btn-more");
 
     window.addEventListener("scroll", _ => onPageScrolled());
     menuButtonElement.addEventListener("click", _ => openFullscreenMenu("mainNavMenu"));
+    toursListBtnMore.addEventListener("click", _ => showAllTours());
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
