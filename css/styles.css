@@ -371,4 +371,13 @@
     object-fit: cover;
 }
 
+.footer {
+    background: rgba(36, 36, 36, 1);
+}
+
+.footer-content {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 0.875rem;
+}
+
 /* Main END */
