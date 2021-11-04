@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Amatic SC";
+  src: url("/assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/assets/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+/* Utils Start */
+
+.font-amatic {
+  font-family: Amatic SC;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.font-roboto {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0em;
+}
+
+.font-roboto-light {
+  font-family: Roboto Light;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0em;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.items-align-center {
+    align-items: center;
+}
+
+.content-space-between {
+    justify-content: space-between;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.mv-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.m-0 {
+    margin: 0rem;
+}
+
+.p-0 {
+    padding: 0rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-1_25 {
+    padding: 1.25rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.text-white {
+    color: rgb(255, 255, 255);
+}
+
+.text-black {
+    color: rgb(0, 0, 0);
+}
+
+.text-ghostly-white {
+    color: rgba(255, 255, 255, .8);
+}
+
+.text-semi-transparent-white {
+    color: rgba(255, 255, 255, .5);
+}
+
+.text-header {
+    font-size: 6rem;
+}
+
+.text-subheader {
+    font-size: 0.875rem;
+}
+
+.text-section-title {
+    font-size: 2.25rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/* Utils END */
+
+/* Main Start */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header_normal {
+  background-color: rgba(0, 0, 0, 0);
+
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.header_scrolled {
+  background-color: rgb(0, 0, 0);
+
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+/* .logo {} */
+
+.logo__image {
+  width: 2.5rem;
+}
+
+.menu-button {
+    width: 24px;
+    height: 1rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero_theme_main {
+  background-image: url("/assets/images/DSC00015.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .hero__content {} */
+
+.sightseens {
+  padding: 6rem 0 6rem;
+}
+
+/* Main END */
