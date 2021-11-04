@@ -69,6 +69,10 @@
   justify-content: center;
 }
 
+.content-left {
+  justify-content: start;
+}
+
 .mv-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -303,7 +307,7 @@
 }
 
 .tours {
-    padding: 6rem 0 3rem;
+    padding: 6rem 0 0 0;
 }
 
 .tours-list-element_hidden {
@@ -339,6 +343,32 @@
 .tours-list-btn-more {
     color: rgba(159, 159, 159, 1);
     font-size: 0.875rem;
+}
+
+.contacts {
+  padding: 6rem 0 3rem 0;
+}
+
+/* .contacts__content {} */
+
+.contacts-list {
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.contacts-list-item {
+    font-size: 0.875rem;
+}
+
+.contacts-list-item__icon {
+    padding-right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.contacts__map {
+    height: 25rem;
+    object-fit: cover;
 }
 
 /* Main END */
