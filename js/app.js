@@ -10,7 +10,7 @@ let menuButtonElement = null;
 let toursListBtnMore = null;
 
 const onPageScrolled = function () {
-    if (window.pageYOffset > headerElement.offsetTop) {
+    if (window.pageYOffset > 0) {
         headerElement.classList.replace("header_normal", "header_scrolled");
     } else {
         headerElement.classList.replace("header_scrolled", "header_normal");
