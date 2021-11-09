@@ -28,7 +28,7 @@ const openFullscreenMenu = function(menuId) {
     headerElement.old_visibility = headerElement.style.visibility;
     headerElement.style.visibility = "hidden";
 
-    document.getElementById(menuId).classList.remove("overlayMenu_closed");
+    document.getElementById(menuId).classList.remove("overlay-menu_closed");
 }
 
 /**
@@ -42,7 +42,7 @@ const closeNav = function(callee) {
     headerElement.style.visibility = headerElement.old_visibility;
     delete headerElement.old_visibility;
 
-    callee.closest(".overlayMenu").classList.add("overlayMenu_closed");
+    callee.closest(".overlay-menu").classList.add("overlay-menu_closed");
 }
 
 /**

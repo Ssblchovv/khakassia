@@ -184,7 +184,7 @@
   transition: background-color 200ms linear;
 }
 
-.overlayMenu {
+.overlay-menu {
   height: 100vh;
   width: 100vw;
   display: block;
@@ -196,25 +196,25 @@
   overflow-x: hidden;
 }
 
-.overlayMenu_closed {
+.overlay-menu_closed {
   display: none;
 }
 
-.overlayMenu__close-btn {
+.overlay-menu__close-btn {
   position: absolute;
   bottom: 1.25rem;
   right: 1.25rem;
   font-size: 60px;
 }
 
-.overlayMenu__logo {
+.overlay-menu__logo {
   width: 2.5rem;
   position: absolute;
   top: 1.25rem;
   left: 1.25rem;
 }
 
-.overlayMenu_content {
+.overlay-menu_content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -222,7 +222,7 @@
   text-align: center;
 }
 
-.overlayMenu_content__item {
+.overlay-menu_content__item {
   padding: 8px;
   text-decoration: none;
   display: block;
@@ -230,8 +230,8 @@
   transition: color 0.3s;
 }
 
-.overlayMenu_content__item:hover,
-.overlayMenu_content__item:focus {
+.overlay-menu_content__item:hover,
+.overlay-menu_content__item:focus {
   color: rgb(191, 191, 191);
   transition: color 0.3s;
 }
