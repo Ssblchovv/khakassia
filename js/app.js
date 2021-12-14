@@ -19,7 +19,7 @@ const onPageScrolled = function () {
 
 /**
  * 
- * @param {String} callee 
+ * @param {String} menuId 
  */
 const openFullscreenMenu = function(menuId) {
     document.body.old_overflow = document.body.style.overflow;
@@ -28,7 +28,11 @@ const openFullscreenMenu = function(menuId) {
     headerElement.old_visibility = headerElement.style.visibility;
     headerElement.style.visibility = "hidden";
 
-    document.getElementById(menuId).classList.remove("overlay-menu_closed");
+    let menuElement = document.getElementById(menuId);
+    menuElement.style.display = "block";
+    requestAnimationFrame(() => {
+        menuElement.classList.replace("overlay-menu_closed", "overlay-menu_opened");
+    });
 }
 
 /**
@@ -42,7 +46,7 @@ const closeNav = function(callee) {
     headerElement.style.visibility = headerElement.old_visibility;
     delete headerElement.old_visibility;
 
-    callee.closest(".overlay-menu").classList.add("overlay-menu_closed");
+    callee.closest(".overlay-menu").classList.replace("overlay-menu_opened", "overlay-menu_closed");
 }
 
 /**
@@ -64,6 +68,16 @@ const showAllTours = function() {
     toursListBtnMore.style.display = "none";
 }
 
+/**
+ * 
+ * @param {HTMLElement} menuElement 
+ */
+const completelyHideMenu = function(menuElement) {
+    if (menuElement.classList.contains("overlay-menu_closed")) {
+        menuElement.style.display = "none";
+    }
+}
+
 const init = function () {
     headerElement = document.querySelector(".header");
     menuButtonElement = document.querySelector(".menu-button");
@@ -72,6 +86,11 @@ const init = function () {
     window.addEventListener("scroll", _ => onPageScrolled());
     menuButtonElement.addEventListener("click", _ => openFullscreenMenu("mainNavMenu"));
     toursListBtnMore.addEventListener("click", _ => showAllTours());
+
+    document.querySelectorAll(".overlay-menu").forEach(menu => {
+        menu.style.display = "none";
+        menu.addEventListener("transitionend", _ => completelyHideMenu(menu), true);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
