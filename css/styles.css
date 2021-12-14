@@ -212,6 +212,45 @@
   bottom: 1.25rem;
   right: 1.25rem;
   font-size: 60px;
+  
+  transition: all .5s ease-out;
+
+  animation-duration: 1s;
+  animation-name: moving_close_btn;
+}
+
+@keyframes moving_close_btn {
+  from {
+    bottom: 92%;
+  }
+  
+  to {
+    bottom: 1.25rem;
+  }
+}
+
+.overlay-menu__close-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: white;
+  transition: all .5s ease-out;
+}
+
+.overlay-menu__close-btn_closer {
+  transform: rotate(180deg);
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .overlay-menu__logo {

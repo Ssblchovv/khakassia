@@ -14,7 +14,14 @@
     <div id="mainNavMenu" class="overlay-menu overlay-menu_closed">
         <img class="overlay-menu__logo" src="assets/images/logo.png" alt="Логотип сайта">
 
+        <!--
         <span class="overlay-menu__close-btn text-white" onclick="closeNav(this)">&times;</span>
+        -->
+        <div class="overlay-menu__close-btn" onclick="closeNav(this)">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
       
         <div class="overlay-menu_content">
             <span onclick="navigateMenu(this)" data-target="main" class="overlay-menu_content__item font-roboto text-centered text-sm text-underline">Главная</span>
