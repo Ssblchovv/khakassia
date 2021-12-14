@@ -1,0 +1,449 @@
+@font-face {
+  font-family: "Amatic SC";
+  src: url("../assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+/* Utils Start */
+
+.font-amatic {
+  font-family: Amatic SC;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.font-roboto {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0em;
+}
+
+.font-roboto-light {
+  font-family: Roboto Light;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0em;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reversed {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reversed {
+  flex-direction: row-reverse;
+}
+
+.items-align-center {
+  align-items: center;
+}
+
+.content-space-between {
+  justify-content: space-between;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.content-left {
+  justify-content: start;
+}
+
+.mv-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mv-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mh-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.m-0 {
+  margin: 0rem;
+}
+
+.p-0 {
+  padding: 0rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-1_25 {
+  padding: 1.25rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-black {
+  color: rgb(0, 0, 0);
+}
+
+.text-ghostly-white {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-semi-transparent-white {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text-header {
+  font-size: 6rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-section-title {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.color-gold {
+    color: rgba(195, 177, 130, 1);
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+/* Utils END */
+
+/* Main Start */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header_normal {
+  background-color: rgba(0, 0, 0, 0);
+
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.header_scrolled {
+  background-color: rgb(0, 0, 0);
+
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.overlay-menu {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: rgba(17, 17, 17, 0.8);
+  overflow-x: hidden;
+}
+
+.overlay-menu_opened {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .5s;
+}
+
+.overlay-menu_closed {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .5s;
+}
+
+.overlay-menu__close-btn {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  font-size: 60px;
+  
+  transition: all .5s ease-out;
+
+  animation-duration: 1s;
+  animation-name: moving_close_btn;
+}
+
+@keyframes moving_close_btn {
+  from {
+    bottom: 92%;
+  }
+  
+  to {
+    bottom: 1.25rem;
+  }
+}
+
+.overlay-menu__close-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: white;
+  transition: all .5s ease-out;
+}
+
+.overlay-menu__close-btn_closer {
+  transform: rotate(180deg);
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.overlay-menu__close-btn_closer .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.overlay-menu__logo {
+  width: 2.5rem;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+
+.overlay-menu_content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-menu_content__item {
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
+}
+
+.overlay-menu_content__item:hover,
+.overlay-menu_content__item:focus {
+  color: rgb(191, 191, 191);
+  transition: color 0.3s;
+}
+
+/* .logo {} */
+
+.logo__image {
+  width: 2.5rem;
+}
+
+.menu-button {
+  width: 24px;
+  height: 1rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero_theme_main {
+  background-image: url("../assets/images/DSC00015.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .hero__content {} */
+
+.hero__go-down {
+  animation-duration: 3s;
+  animation-name: mowing_arrow;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mowing_arrow {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0, -45%);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+}
+
+.sightseens {
+  padding: 6rem 0 0 0;
+}
+
+/* .sightseens__content - TODO: bgcolor */
+
+.sightseens-list-element {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.sightseens-list-element__image {
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sightseens-list-element-content {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.sightseens-list-element-content__title {
+  font-size: 1.5rem;
+  color: rgb(88, 88, 88);
+  padding-bottom: 1.625rem;
+}
+
+.sightseens-list-element-content__text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.tours_content {
+    gap: 1rem;
+}
+
+.tours-list-element {
+  height: 23.75rem;
+  position: relative;
+  z-index: -1;
+}
+
+.tours {
+    padding: 6rem 0 0 0;
+}
+
+.tours-list-element_hidden {
+    display: none;
+}
+
+.tours-list-element__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tours-list-element-content {
+  position: absolute;
+  bottom: 0;
+  padding: 1.75rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.tours-list-element-content-subrow__btn {
+  padding: 1rem 1.25rem;
+  border: 2px solid;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tours-list-btn-more {
+    color: rgba(159, 159, 159, 1);
+    font-size: 0.875rem;
+}
+
+.contacts {
+  padding: 6rem 0 3rem 0;
+}
+
+/* .contacts__content {} */
+
+.contacts-list {
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.contacts-list-item {
+    font-size: 0.875rem;
+}
+
+.contacts-list-item__icon {
+    padding-right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.contacts__map {
+    height: 25rem;
+    object-fit: cover;
+}
+
+.footer {
+    background: rgba(36, 36, 36, 1);
+}
+
+.footer-content {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Main END */
