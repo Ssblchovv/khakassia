@@ -367,6 +367,7 @@
 
 .tours_content {
     gap: 1rem;
+    flex-direction: column;
 }
 
 .tours-list-element {
@@ -500,6 +501,23 @@
 
   .sightseens-list-element__image {
     max-height: 18.75rem;
+  }
+
+  .tours_content {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .tours-list-element {
+    flex: 1 0 30%;
+  }
+
+  .tours-list-element_hidden {
+    display: flex;
+  }
+
+  .tours-list-btn-more {
+    display: none;
   }
 }
 
