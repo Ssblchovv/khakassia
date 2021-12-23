@@ -296,7 +296,6 @@
 }
 
 .hero {
-  width: 100%;
   height: 100vh;
 }
 
@@ -340,6 +339,8 @@
   padding-right: 1rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+
+  flex-direction: column;
 }
 
 .sightseens-list-element__image {
@@ -471,6 +472,34 @@
 
   .menu-button {
     display: none;
+  }
+
+  section[data-secname] {
+    padding: 7.25rem 8.125rem 7.25rem 8.125rem;
+  }
+
+  .sightseens {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .sightseens-list-element {
+    padding: 0;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  
+    flex-direction: row;
+  }
+
+  .sightseens-list-element:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .sightseens-list-element:nth-child(2n) > article {
+    padding-left: 0;
+  }
+
+  .sightseens-list-element__image {
+    max-height: 18.75rem;
   }
 }
 
