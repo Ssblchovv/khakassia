@@ -32,7 +32,7 @@
 .font-roboto-light {
   font-family: Roboto Light;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 0em;
 }
 
@@ -462,6 +462,14 @@
   padding: 2rem 8.125rem 2rem 0;
 }
 
+.footer-menu, .footer-contacts, .footer-decoy {
+  display: none;
+}
+
+[data-target] {
+  cursor: pointer;
+}
+
 @media (min-width:1025px) { 
   .desktop-navigation {
     display: flex;
@@ -536,6 +544,31 @@
 
   .contacts-list {
     align-self: flex-start;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2.625rem;
+    padding: 2rem 7.25rem 6.75rem 7.25rem;
+  }
+
+  .footer-content {
+    padding: 0;
+  }
+
+  .footer-menu, .footer-contacts, .footer-decoy {
+    display: block;
+  }
+
+  .footer-section__heading {
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-navigation {
+    display: flex;
+    gap: 1.25rem;
   }
 }
 
