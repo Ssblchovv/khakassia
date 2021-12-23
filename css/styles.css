@@ -332,8 +332,6 @@
   padding: 6rem 0 0 0;
 }
 
-/* .sightseens__content - TODO: bgcolor */
-
 .sightseens-list-element {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -479,14 +477,20 @@
     padding: 7.25rem 8.125rem 7.25rem 8.125rem;
   }
 
+  .text-section-title {
+    margin-bottom: 3.75rem;
+  }
+
   .sightseens {
     background-color: rgb(238, 238, 238);
   }
 
+  .sightseens__content {
+    gap: 1.75rem;
+  }
+
   .sightseens-list-element {
     padding: 0;
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
   
     flex-direction: row;
   }
