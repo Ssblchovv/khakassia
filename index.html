@@ -14,9 +14,6 @@
     <div id="mainNavMenu" class="overlay-menu overlay-menu_closed">
         <img class="overlay-menu__logo" src="assets/images/logo.png" alt="Логотип сайта">
 
-        <!--
-        <span class="overlay-menu__close-btn text-white" onclick="closeNav(this)">&times;</span>
-        -->
         <div class="overlay-menu__close-btn" onclick="closeNav(this)">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
@@ -32,9 +29,16 @@
     </div>
 
     <nav class="header header_normal d-flex flex-row">
-        <a href="/" class="logo p-1_25">
+        <a href="/" class="logo">
             <img class="logo__image" src="assets/images/logo.png" alt="Логотип сайта">
         </a>
+      
+        <div class="desktop-navigation flex-row text-white font-roboto text-centered text-sm">
+            <span onclick="navigateMenu(this)" data-target="main" class="desktop-navigation__item text-underline">Главная</span>
+            <span onclick="navigateMenu(this)" data-target="sightseens" class="desktop-navigation__item">Достопримечательности</span>
+            <span onclick="navigateMenu(this)" data-target="tours" class="desktop-navigation__item">Туры</span>
+            <span onclick="navigateMenu(this)" data-target="contacts" class="desktop-navigation__item">Контакты</span>
+        </div>
 
         <span class="menu-button p-1_25 mv-auto">
             <img class="menu-button__image" src="assets/images/hamburger.svg" alt="Кнопка меню">

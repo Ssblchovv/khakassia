@@ -282,7 +282,9 @@
   transition: color 0.3s;
 }
 
-/* .logo {} */
+.logo {
+  padding: 1.25rem;
+}
 
 .logo__image {
   width: 2.5rem;
@@ -444,6 +446,32 @@
 .footer-content {
     padding: 1.5rem 1rem 1.5rem 1rem;
     font-size: 0.875rem;
+}
+
+.desktop-navigation {
+  display: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: 1.25rem;
+  padding: 2rem 8.125rem 2rem 0;
+}
+
+@media (min-width:1025px) { 
+  .desktop-navigation {
+    display: flex;
+  }
+
+  .logo {
+    padding: 2rem 0 2rem 8.125rem;
+  }
+
+  .logo__image {
+    width: 5rem;
+  }
+
+  .menu-button {
+    display: none;
+  }
 }
 
 /* Main END */
