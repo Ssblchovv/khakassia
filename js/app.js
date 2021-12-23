@@ -47,9 +47,11 @@ const closeNav = function(callee) {
     headerElement.style.visibility = headerElement.old_visibility;
     delete headerElement.old_visibility;
 
-    let menuElement = callee.closest(".overlay-menu");
-    menuElement.classList.replace("overlay-menu_opened", "overlay-menu_closed");
-    menuElement.querySelector(".overlay-menu__close-btn").classList.remove("overlay-menu__close-btn_closer")
+    try {
+        let menuElement = callee.closest(".overlay-menu");
+        menuElement.classList.replace("overlay-menu_opened", "overlay-menu_closed");
+        menuElement.querySelector(".overlay-menu__close-btn").classList.remove("overlay-menu__close-btn_closer");
+    } catch {}
 }
 
 /**
@@ -61,6 +63,20 @@ const navigateMenu = function(callee) {
     let targetElement = document.querySelector(`[data-secname=${callee.dataset.target}]`);
     if (targetElement != null) {
         targetElement.scrollIntoView(true);
+    }
+}
+
+/**
+ * 
+ * @param {HTMLElement} callee 
+ */
+const navigateInlineMenu = function(callee) {
+    let targetElement = document.querySelector(`[data-secname=${callee.dataset.target}]`);
+    if (targetElement != null) {
+        const yOffset = -headerElement.clientHeight / 2; 
+        const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    
+        window.scrollTo({top: y, behavior: 'smooth'});
     }
 }
 
