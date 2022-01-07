@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хакасия</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+    <div id="mainNavMenu" class="overlay-menu overlay-menu_closed">
+        <img class="overlay-menu__logo" src="assets/images/logo.png" alt="Логотип сайта">
+
+        <div class="overlay-menu__close-btn" onclick="closeNav(this)">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+      
+        <div class="overlay-menu_content">
+            <span onclick="navigateMenu(this)" data-target="main" class="overlay-menu_content__item font-roboto text-centered text-sm text-underline">Главная</span>
+            <span onclick="navigateMenu(this)" data-target="sightseens" class="overlay-menu_content__item font-roboto text-centered text-sm">Достопримечательности</span>
+            <span onclick="navigateMenu(this)" data-target="tours" class="overlay-menu_content__item font-roboto text-centered text-sm">Туры</span>
+            <span onclick="navigateMenu(this)" data-target="contacts" class="overlay-menu_content__item font-roboto text-centered text-sm">Контакты</span>
+        </div>
+    </div>
+
+    <nav class="header header_normal d-flex flex-row">
+        <a href="/" class="logo">
+            <img class="logo__image" src="assets/images/logo.png" alt="Логотип сайта">
+        </a>
+      
+        <div class="desktop-navigation flex-row text-white font-roboto text-centered text-sm">
+            <span onclick="navigateInlineMenu(this)" data-target="main" class="desktop-navigation__item text-underline">Главная</span>
+            <span onclick="navigateInlineMenu(this)" data-target="sightseens" class="desktop-navigation__item">Достопримечательности</span>
+            <span onclick="navigateInlineMenu(this)" data-target="tours" class="desktop-navigation__item">Туры</span>
+            <span onclick="navigateInlineMenu(this)" data-target="contacts" class="desktop-navigation__item">Контакты</span>
+        </div>
+
+        <span class="menu-button p-1_25 mv-auto">
+            <img class="menu-button__image" src="assets/images/hamburger.svg" alt="Кнопка меню">
+        </span>
+    </nav>
+
+    <!-- 
+        И хотя валидатор W3C кидает Warning на отсутствие заголовка внутри section - он нам не нужен,
+        поэтому его нет. Данное поведение разрешено консорциумом W3C.
+        (см. https://www.w3.org/TR/2014/CR-html5-20140204/dom.html#sectioning-content)
+    -->
+    <section class="hero hero_theme_main d-flex flex-col items-align-center content-space-between" data-secname="main">
+        <span class="decoy"></span> <!-- Нужен для правильного выравнивания во flex -->
+
+        <div class="hero__content">
+            <p class="text-header text-centered font-amatic text-ghostly-white m-0">
+                Хакасия
+            </p>
+            <p class="text-sm text-centered font-roboto-light text-semi-transparent-white m-0">
+                Туристическое Агенство Республики Хакасия
+            </p>
+        </div>
+
+        <img class="hero__go-down p-1" src="assets/images/go_down.svg" alt="Перейти вниз">
+    </section>
+
+    <section class="sightseens" data-secname="sightseens">
+        <h2 class="text-section-title font-amatic">Достопримечательности</h2>
+
+        <div class="sightseens__content d-flex flex-col">
+            <div class="sightseens-list-element d-flex">
+                <img class="sightseens-list-element__image" src="assets/images/DJI_0185-Pano.png" alt="Фотография тропы предков">
+                <article class="sightseens-list-element-content">
+                    <h6 class="sightseens-list-element-content__title font-roboto text-underline">Тропа предков</h6>
+                    <p class="sightseens-list-element-content__text font-roboto m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio...</p>
+                </article>
+            </div>
+            <div class="sightseens-list-element d-flex">
+                <img class="sightseens-list-element__image" src="assets/images/DJI_0185-Pano.png" alt="Фотография тропы предков">
+                <article class="sightseens-list-element-content">
+                    <h6 class="sightseens-list-element-content__title font-roboto text-underline">Приисковый</h6>
+                    <p class="sightseens-list-element-content__text font-roboto m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio...</p>
+                </article>
+            </div>
+            <div class="sightseens-list-element d-flex">
+                <img class="sightseens-list-element__image" src="assets/images/DJI_0185-Pano.png" alt="Фотография тропы предков">
+                <article class="sightseens-list-element-content">
+                    <h6 class="sightseens-list-element-content__title font-roboto text-underline">Сундуки</h6>
+                    <p class="sightseens-list-element-content__text font-roboto m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. Vivamus id nunc at ante vulputate egestas. Sed varius elit ornare condimentum fermentum. Integer mattis pretium tortor dictum tristique. Donec in congue mauris. Quisque vitae nisi ultricies, efficitur odio vel, porta nulla. Donec porta, mauris nec pharetra mollis, diam lorem luctus velit, nec ultricies nunc quam posuere dui. Donec at nisl lorem. Sed vitae sapien metus. In erat felis, pharetra vitae libero eu, posuere accumsan odio...</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tours" data-secname="tours">
+        <h2 class="text-section-title font-amatic">Туры</h2>
+
+        <div class="tours_content mh-1 d-flex">
+            <div class="tours-list-element">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tours-list-element">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tours-list-element tours-list-element_hidden">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tours-list-element tours-list-element_hidden">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tours-list-element tours-list-element_hidden">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="tours-list-element tours-list-element_hidden">
+                <img class="tours-list-element__bg" src="assets/images/DJI_0210.png" alt="Фотография тропы предков">
+                <article class="tours-list-element-content d-flex flex-col">
+                    <p class="tours-list-element-content__title font-roboto text-bold">Название</p>
+                    <p class="tours-list-element-content__description font-roboto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque. </p>
+                    <div class="tours-list-element-content-subrow d-flex flex-row content-space-between items-align-center">
+                        <span class="font-roboto">
+                            От <strong>10 000</strong> р.
+                        </span>
+                        <a class="tours-list-element-content-subrow__btn bg-transparent outline color-gold">Купить</a>
+                    </div>
+                </article>
+            </div>
+
+            <span class="tours-list-btn-more text-centered outline font-roboto p-1">Больше туров</span>
+        </div>
+    </section>
+    
+    <section class="contacts" data-secname="contacts">
+        <h2 class="text-section-title font-amatic">Контакты</h2>
+
+        <div class="contacts__content mh-1 d-flex flex-col">
+            <div class="contacts-list d-flex flex-col">
+                <div class="contacts-list-item d-flex flex-row content-left items-align-center">
+                    <img class="contacts-list-item__icon" src="assets/images/place.svg" alt="Пиктограмма местоположения">
+                    <span class="contacts-list-item__text font-roboto text-left">655019, Республика Хакасия, г. Абакан, пр. Ленина, д. 67</span>
+                </div>
+                
+                <div class="contacts-list-item d-flex flex-row content-left">
+                    <img class="contacts-list-item__icon" src="assets/images/phone.svg" alt="Пиктограмма номера телефона">
+                    <span class="contacts-list-item__text font-roboto text-left">
+                        <p class="m-0 mb-1">8 (3902) 22-53-35</p>
+                        <p class="m-0">8 (3902) 24-30-71</p>
+                    </span>
+                </div>
+                
+                <div class="contacts-list-item d-flex flex-row content-left items-align-center">
+                    <img class="contacts-list-item__icon" src="assets/images/email.svg" alt="Пиктограмма эл. почты">
+                    <span class="contacts-list-item__text font-roboto">kancler@vskhakasia.ru</span>
+                </div>
+            </div>
+
+            <img class="contacts__map" src="assets/images/map.png" alt="Карта">
+        </div>
+    </section>
+
+    <footer class="footer text-white font-roboto">
+        <div class="footer-menu">
+            <p class="footer-section__heading text-bold">Меню</p>
+      
+            <div class="footer-navigation flex-col font-roboto-light">
+                <span onclick="navigateInlineMenu(this)" data-target="main" class="footer-navigation__item">Главная</span>
+                <span onclick="navigateInlineMenu(this)" data-target="sightseens" class="footer-navigation__item">Достопримечательности</span>
+                <span onclick="navigateInlineMenu(this)" data-target="tours" class="footer-navigation__item">Туры</span>
+                <span onclick="navigateInlineMenu(this)" data-target="contacts" class="footer-navigation__item">Контакты</span>
+            </div>
+        </div>
+        <div class="footer-contacts">
+            <p class="footer-section__heading text-bold">Контакты</p>
+            
+            <div class="footer-contacts__list">
+                <p class="m-0">655019, Республика Хакасия, г. Абакан, пр. Ленина, д. 67</p>
+                <p class="m-0 m-1">Справочная служба: 8 (3902) 22-53-35, факс: 8 (3902) 24-30-71</p>
+                <p class="m-0">Электронная почта: kancler@vskhakasia.ru</p>
+            </div>
+        </div>
+        <div class="footer-decoy"></div>
+        <div class="footer-content">
+            <p class="footer-section__heading">Официальный сайт Агенства Туризма Республики Хакасия  ©  2021</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
